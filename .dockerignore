@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build outputs (will be created during Docker build)
+dist/
+build/
+
+# Git
+.git/
+.gitignore
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test files
+coverage/
+__tests__/
+
+# Lock files (we use package-lock.json)
+bun.lockb
+
+# Local env files
+.env
+.env.*
+!.env.example
