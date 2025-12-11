@@ -1,0 +1,15 @@
+name: Deploy to Portainer
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Portainer Stack Update
+        run: |
+          curl -X POST https://portainer.mlc-server.com/api/stacks/webhooks/e17f9550-f297-457d-ac47-b21a0b3071f0
+
