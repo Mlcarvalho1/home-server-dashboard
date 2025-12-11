@@ -33,4 +33,3 @@ require (
 	golang.org/x/tools v0.16.1 // indirect
 	gotest.tools/v3 v3.5.1 // indirect
 )
-

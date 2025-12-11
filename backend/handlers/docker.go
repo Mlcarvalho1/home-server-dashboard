@@ -8,7 +8,6 @@ import (
 	"time"
 
 	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 )
 
@@ -68,7 +67,7 @@ func DockerHandler(w http.ResponseWriter, r *http.Request) {
 	info.Version = version.Version
 
 	// List containers
-	containers, err := cli.ContainerList(ctx, container.ListOptions{All: true})
+	containers, err := cli.ContainerList(ctx, types.ContainerListOptions{All: true})
 	if err != nil {
 		json.NewEncoder(w).Encode(info)
 		return
